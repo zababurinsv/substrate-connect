@@ -41,6 +41,7 @@
     "express": "^4.17.1",
     "find-up": "^4.1.0",
     "html-webpack-plugin": "^4.3.0",
+    "morgan": "^1.10.0",
     "next-tick": "^1.1.0",
     "process": "^0.11.10",
     "styled-components": "^5.1.0",

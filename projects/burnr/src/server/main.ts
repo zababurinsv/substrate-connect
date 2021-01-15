@@ -1,4 +1,5 @@
 import express from 'express';
+import morgan from 'morgan';
 import path from 'path';
 import { pagesRouter } from './routes/pages-router';
 import { staticsRouter } from './routes/statics-router';
@@ -10,6 +11,8 @@ console.log(`config: ${JSON.stringify(config, null, 2)}`);
 console.log(`*******************************************`);
 
 const app = express();
+
+app.use(morgan('common'));
 app.set('view engine', 'ejs');
 
 app.use('/assets', express.static(path.join(process.cwd(), 'assets')));
