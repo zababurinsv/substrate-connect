@@ -1,4 +1,4 @@
-import path from 'path';
+import { join } from 'path';
 import express from 'express';
 import { Router } from 'express';
 import { IS_DEV, WEBPACK_PORT } from '../config';
@@ -6,6 +6,7 @@ import { createProxyMiddleware } from 'http-proxy-middleware';
 
 export function staticsRouter() {
   const router = Router();
+  const cwd = process.cwd();
 
   if (IS_DEV) {
     // eslint-disable-next-line @typescript-eslint/no-var-requires
@@ -17,10 +18,11 @@ export function staticsRouter() {
       }),
     );
   } else {
-    const staticsPath = path.join(process.cwd(), 'dist', 'statics');
+    const staticsPath = join(cwd, 'dist', 'statics');
 
     // All the assets are in "statics" folder (Done by Webpack during the build phase)
     router.use('/statics', express.static(staticsPath));
+
   }
   return router;
 }
