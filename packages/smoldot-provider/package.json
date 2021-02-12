@@ -16,10 +16,8 @@
     "build": "tsc --build src",
     "clean": "rm -rf dist/",
     "pretest": "yarn build",
-    "test": "ava --config ava.config.js --verbose",
-    "examples": "ava --config ava.examples.config.js",
-    "prepack": "yarn test && yarn examples",
-    "postinstall": "yarn test"
+    "test": "jest src/**/*.test.ts",
+    "prepack": "yarn test && yarn examples"
   },
   "release": [
     "dist/**"
@@ -34,13 +32,15 @@
   },
   "devDependencies": {
     "@polkadot/api": "^3.7.3",
+    "@substrate/smoldot-test-utils": "file:../smoldot-test-utils",
+    "@types/jest": "^26.0.20",
     "@types/mkdirp": "^1.0.1",
     "@types/sinon": "^9.0.10",
     "ava": "^3.15.0",
     "sinon": "^9.2.3",
+    "ts-jest": "^26.5.1",
     "ts-node": "^9.1.1",
-    "typescript": "^4.1.3",
-    "@substrate/smoldot-test-utils": "file:../smoldot-test-utils"
+    "typescript": "^4.1.3"
   },
   "peerDependencies": {
     "@polkadot/wasm-crypto": "^3.2.2"
