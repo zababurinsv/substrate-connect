@@ -8,8 +8,8 @@
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "composite": true,
-    "module": "ES2020",
-    "target": "ES2018"
+    "module": "es2020",
+    "target": "esnext"
   },
   "files": [
     "package.json"

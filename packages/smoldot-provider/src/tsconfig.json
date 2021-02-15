@@ -11,11 +11,11 @@
     "sourceMap": true,
     "declarationMap": true,
     "outDir": "../dist/",
-    "target": "ES2018",
+    "target": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "strict": true,
-    "module": "ES2020"
+    "module": "es2020"
   }
 }
