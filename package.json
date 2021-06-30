@@ -20,7 +20,8 @@
     "projects/smoldot-browser-demo",
     "projects/multiple-network-demo",
     "projects/burnr",
-    "projects/landing-page"
+    "projects/landing-page",
+    "projects/openbazaar"
   ],
   "scripts": {
     "deep-clean": "yarn workspaces run deep-clean && rm -rf .parcel-cache && rm -rf node_modules",
